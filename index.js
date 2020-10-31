@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
   res.json({ message: "Bienvenue sur mon serveur" });
 }); //pour tester la route
 
-app.post("/form", (req, res) => {
-  //console.log(req.fields);
+app.post("/", (req, res) => {
+  npxconsole.log(req.fields);
 
   const { firstname, lastname, email } = req.fields;
   const data = {

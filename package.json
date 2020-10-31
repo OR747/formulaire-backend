@@ -14,11 +14,5 @@
     "express": "^4.17.1",
     "express-formidable": "^1.2.0",
     "mailgun-js": "^0.22.0"
-  },
-  "devDependencies": {},
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "URL"
   }
 }
