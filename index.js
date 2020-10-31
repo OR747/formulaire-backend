@@ -6,8 +6,8 @@ app.use(formidable());
 app.use(cors());
 require("dotenv").config();
 
-var API_KEY = process.env.MAILGUN_API_KEY;
-var DOMAIN = process.env.MAILGUN_DOMAIN;
+var API_KEY = "ae639a46ea1ec9a95cd17a842d6b052c-9b1bf5d3-dbb62770";
+var DOMAIN = "sandbox850347cc241f424d8e3c68111d919bbf.mailgun.org";
 var mailgun = require("mailgun-js")({ apiKey: API_KEY, domain: DOMAIN });
 
 app.get("/", (req, res) => {
@@ -40,6 +40,6 @@ app.all("*", (req, res) => {
   res.json({ message: "Route introuvable" });
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(3000, () => {
   console.log("Server started");
 });
