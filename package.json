@@ -16,5 +16,9 @@
     "mailgun-js": "^0.22.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "URL"
+  }
 }
