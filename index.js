@@ -14,13 +14,12 @@ app.get("/", (req, res) => {
   res.json({ message: "Bienvenue sur mon serveur" });
 }); //pour tester la route
 
-app.post("/", (req, res) => {
-  npxconsole.log(req.fields);
-
-  const { firstname, lastname, email } = req.fields;
+app.post("/form", (req, res) => {
+  //console.log(req.fields);
+  const { firstname, lastname, email, subject, message } = req.fields;
   const data = {
-    from: `${firstname} ${lastname} <${email}>`,
-    to: "subtilis747@yahoo.fr",
+    from: "Promo Phoenix20 <me@samples.mailgun.org>",
+    to: req.fields.email,
     subject: "Hello",
     text: "Testing some Mailgun awesomeness!",
   };
